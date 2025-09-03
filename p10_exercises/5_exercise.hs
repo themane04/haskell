@@ -1,0 +1,4 @@
+-- Begründe, warum in 1.3 Python und JavaScript Seiteneffekte haben, nicht jedoch Ruby.
+--- Python: list.reverse() mutiert die Liste in-place und gibt None zurück. Zweiter Aufruf mutiert erneut ⇒ newList = None. Seiteneffekt.
+--- JavaScript: Array.prototype.reverse() mutiert das Array und gibt das gleiche Array zurück. Zweiter Aufruf kehrt wieder um ⇒ newList ist dasselbe Array, jetzt wieder [1,2,3]. Seiteneffekt.
+--- Ruby: Array#reverse gibt eine neue umgekehrte Kopie zurück (keine Mutation). (Für Mutation gäbe es reverse!.) Kein Seiteneffekt beim gezeigten Code.

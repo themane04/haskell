@@ -1,0 +1,7 @@
+-- Suche mit www.hoogle.haskell.org alle Funktionen, welche potentiell eine Liste sortieren.
+-- Hoogle: Funktionen, die (potenziell) Listen sortieren
+--- Die üblichen Kandidaten aus Data.List:
+--- sort :: Ord a => [a] -> [a]
+--- sortBy :: (a -> a -> Ordering) -> [a] -> [a]
+--- sortOn :: Ord b => (a -> b) -> [a] -> [a]
+--- (Hilfreich dazu: Data.Ord.comparing für sortBy.)

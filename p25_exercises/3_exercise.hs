@@ -1,0 +1,13 @@
+-- Überlege, ob folgende fehlerhafte Ausdrücke durch den Compiler gefunden werden, oder zur Laufzeit auftreten:
+12 `div` '0'
+1 `div` 0
+"Guten" + "Morgen."
+[1,'a']
+head []
+sqrt (-1)
+--- 12 \div` '0' → **Compile-Time**: Typfehler (div :: Integral a => a -> a -> a, aber '0' :: Char`).
+--- 1 \div` 0` → Runtime: Division durch 0 ⇒ Exception „divide by zero“.
+--- "Guten" + "Morgen." → Compile-Time: Typfehler (+ für Num, Strings sind Listen; richtig wäre ++).
+--- [1,'a'] → Compile-Time: Typfehler (Listenelemente müssen gleichen Typ haben; 1 :: Num a, 'a' :: Char).
+--- head [] → Runtime: Exception „Prelude.head: empty list“ (leere Liste).
+--- sqrt (-1) → Runtime-Ergebnis: kein Typfehler; ergibt NaN (Not a Number) für Floating-Typen.

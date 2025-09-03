@@ -1,0 +1,6 @@
+-- Was geschieht in Haskell, wenn folgende Funktionsaufrufe ausgewertet werden?
+--- sum [1..]
+--- print [1..]
+--- sum [1..] Divergiert (endet nicht). sum benötigt das ganze Ergebnis; bei einer unendlichen Liste kommt es nie zum Abschluss.
+--- print [1..] Beginnt zu drucken und hört nie auf (streamt endlos). Wegen Lazy Evaluation kann Ausgabe starten, aber die Gesamtausgabe terminiert nicht.
+--- Kurz: beide terminieren nicht; print produziert immerhin laufend Output, sum hängt ohne sichtbares Ergebnis.

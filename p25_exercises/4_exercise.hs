@@ -1,0 +1,8 @@
+-- Warum sind in Haskell Tupel mit nur einer Komponente nicht erlaubt? Hinweis: Finde einen Ausdruck mit runden Klammern, welcher einen nicht mehr eindeutigen Typ hätte.
+--- In Haskell sind Tupel mit nur einer Komponente nicht erlaubt, weil sie sich nicht eindeutig vom normalen Gebrauch von Klammern unterscheiden lassen würden.
+--- Beispiel:
+---- (3) bedeutet einfach die Zahl 3 (Klammern dienen hier nur der Gruppierung).
+---- Würde man (3) auch als „1-Tupel mit Element 3“ interpretieren, wäre der Typ uneindeutig:
+---- 3 :: Int
+---- (3) :: (Int) ? (Wäre das jetzt ein spezieller Tupeltyp?)
+---- Dadurch gäbe es keinen klar unterscheidbaren Typ, weil (a) und a immer dasselbe wären.
