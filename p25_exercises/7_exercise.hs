@@ -13,37 +13,37 @@ import Prelude hiding (abs, even, odd, signum)
 --- | **Double**            |  ✓  |  ✓  |  ✓  |     ✗    |      ✓     |
 
 -- Instanzen inspizieren (zeigt u. a. Instanzlisten):
-:info Eq
-:info Ord
-:info Num
-:info Integral
-:info Fractional
+--- :info Eq
+--- :info Ord
+--- :info Num
+--- :info Integral
+--- :info Fractional
 
 -- Kleine Checks mit Operatoren:
 -- Eq
-True == False         -- OK
-'a' == 'b'            -- OK
-"hi" == "hi"          -- OK
+--- True == False         -- OK
+--- 'a' == 'b'            -- OK
+--- "hi" == "hi"          -- OK
 
 -- Ord
-True < False          -- OK
-'a' < 'b'             -- OK
-"ab" < "ac"           -- OK (lexikografisch)
+--- True < False          -- OK
+--- 'a' < 'b'             -- OK
+--- "ab" < "ac"           -- OK (lexikografisch)
 
 -- Num
-1 + 2                 -- OK (Int, defaulting möglich)
-1 :: Int; 1 + 2       -- OK
-1 :: Integer; 1 + 2   -- OK
-1.0 :: Double; 1.0 + 2.0  -- OK
-True + 1              -- Fehler (Bool ist nicht Num)
-"3" + "4"             -- Fehler (String ist nicht Num)
+--- 1 + 2                 -- OK (Int, defaulting möglich)
+--- 1 :: Int; 1 + 2       -- OK
+--- 1 :: Integer; 1 + 2   -- OK
+--- 1.0 :: Double; 1.0 + 2.0  -- OK
+--- True + 1              -- Fehler (Bool ist nicht Num)
+--- "3" + "4"             -- Fehler (String ist nicht Num)
 
 -- Integral vs. Fractional:
-7 `div` 2             -- OK (Integral)
-7 / 2                 -- OK (Fractional: ergibt 3.5)
-(7 :: Int) / 2        -- Fehler (Int ist nicht Fractional)
-(7 :: Int) `div` 2    -- OK
-(7 :: Double) `div` 2 -- Fehler (`div` braucht Integral)
+--- 7 `div` 2             -- OK (Integral)
+--- 7 / 2                 -- OK (Fractional: ergibt 3.5)
+--- (7 :: Int) / 2        -- Fehler (Int ist nicht Fractional)
+--- (7 :: Int) `div` 2    -- OK
+--- (7 :: Double) `div` 2 -- Fehler (`div` braucht Integral)
 
 -- Bekannte Funktionen kombinieren: Man nutzt bereits vorhandene Funktionen und verbindet sie.
 even :: Integral a => a -> Bool

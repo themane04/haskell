@@ -8,7 +8,7 @@
 -- 1) Mit Guards
 nullGuards :: [a] -> Bool
 nullGuards xs
-  | xs == []  = True     -- braucht Eq-Constraint, obwohl inhaltlich unnötig
+  | null xs  = True     -- braucht Eq-Constraint, obwohl inhaltlich unnötig
   | otherwise = False
 
 -- 2) Mit Pattern Matching
@@ -18,7 +18,7 @@ nullPM (_:_)  = False
 
 -- 3) Mit if–else
 nullIf :: [a] -> Bool
-nullIf xs = if xs == [] then True else False
+nullIf = null
 
 -- Wie ist null wirklich implementiert?
 --- Typ in der Prelude (seit FTP/Foldable)

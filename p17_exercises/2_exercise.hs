@@ -1,0 +1,17 @@
+-- Schreibe die mathematischen Funktionen in Haskell-Syntax.
+--- 1. sin(x^2)
+---- sin (x^2)      -- geht so nicht direkt
+---- sin (x^2)    -- wenn x :: Int, Integer
+---- sin (x**2)   -- wenn x :: Float, Double
+--- 2. sin(x)^2
+----- sin x ^ 2     -- Int/Integer
+----- sin x ** 2    -- Float/Double
+--- 3. log(√2 + 1)
+---- Wurzel = sqrt, Logarithmus = log
+----- log (sqrt 2 + 1)
+--- 4. sin(x) · cos(x)
+---- Multiplikation mit *:
+----- sin x * cos x
+--- 5. sin(cos(sin(x)))
+---- Klammern sauber setzen:
+----- sin (cos (sin x))

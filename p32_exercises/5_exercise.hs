@@ -1,7 +1,7 @@
 -- Folgende Beispiele aus [10] zeigen die Konstruktion von Listen mit dem (:) Operator. Notiere die Listen auf
 -- Papier und prüfe das Resultat danach im GHCi.
-Prelude> 1 : [2,3] -- [1,2,3]
-Prelude> 1 : 2 : [3] -- [1,2,3]
-Prelude> 1 : 2 : 3 : [] -- [1,2,3]
-Prelude> [1,2,3] : [] -- [[1,2,3]]
-Prelude> [1] : [2] : [3] : [] -- [[1],[2],[3]]
+--- Prelude> 1 : [2,3] -- [1,2,3]
+--- Prelude> 1 : 2 : [3] -- [1,2,3]
+--- Prelude> 1 : 2 : 3 : [] -- [1,2,3]
+--- Prelude> [1,2,3] : [] -- [[1,2,3]]
+--- Prelude> [1] : [2] : [3] : [] -- [[1],[2],[3]]

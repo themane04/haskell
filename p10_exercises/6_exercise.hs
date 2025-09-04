@@ -1,5 +1,5 @@
 -- Untersuche den Quicksort-Algorithmus aus Kapitel 1.4.2 wenn die Zeile 4 wie folgt abgeändert wird
-smaller = [a | a <- ns, a < n] -- (statt <=)
---- Folge: Elemente, die dem Pivot n gleich sind, landen weder in smaller noch in larger und gehen verloren.
---- Beispiel: qsort [2,2,2] liefert nur [2] (Duplikate werden entfernt).
---- Schluss: Der Algorithmus sortiert zwar, ist aber nicht mehr duplikat-erhaltend (und auch nicht stabil).
+---- smaller = [a | a <- ns, a < n] -- (statt <=)
+----- Folge: Elemente, die dem Pivot n gleich sind, landen weder in smaller noch in larger und gehen verloren.
+----- Beispiel: qsort [2,2,2] liefert nur [2] (Duplikate werden entfernt).
+----- Schluss: Der Algorithmus sortiert zwar, ist aber nicht mehr duplikat-erhaltend (und auch nicht stabil).
